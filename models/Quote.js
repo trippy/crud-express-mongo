@@ -16,10 +16,9 @@ Map
 
 // Once we've created `quoteSchema` ...
 const quoteSchema = new Schema({
-  name: String,
-  quote: String,
-  label: Array,
-  createdAt: Date
+  name: { type: String, unique: true },
+  quote: { type: String, unique: true },
+  label: { type: Array }
 });
 
 // ... we use mongoose's `model` method to create the model

@@ -118,25 +118,33 @@ getQuotes()
 const quotesTable = async _ => {
   const quotes = [
   {
-    name: 'Yoda Bomb',
-    quote: 'The greatest teacher, failure is.'
+    "name": 'Yoda Bomb',
+    "quote": 'The greatest teacher, failure is.'
   },
   {
-    name: 'The Mandalorian',
-    quote: 'This is the way.'
+    "name": 'The Mandalorian',
+    "quote": 'This is the way.'
   },
   {
-    name: 'Placeholder-1',
-    quote: 'Content'
+    "name": 'Placeholder-1',
+    "quote": 'Content'
   },
   {
-    name: 'Placeholder-2',
-    quote: 'Content'
+    "name": 'Placeholder-2',
+    "quote": 'Content'
   },
   {
-    name: 'Placeholder-3',
-    quote: 'Content',
-    label: ['More Content', 'Even More Content']
+    "name": 'Placeholder-2',
+    "quote": 'Duped Content'
+  },
+  {
+    "name": 'Placeholder-3',
+    "quote": 'Content',
+    "label": ['More Content', 'Even More Content']
+  },
+  {
+    "name": 'Placeholder-4',
+    "quote": 'New Content'
   }];
   quotes.forEach((q) => {
     // console.log(q.name)
@@ -163,7 +171,7 @@ console.log("quotesTable()", quotesTable);
 // `db.quotes.remove({})` will remove all documents in the `quotes` collection
 // `db.quotes.deleteMany({})` will remove all documents in the `quotes` collection
 
-/****************
+/***************
  * port listener
  * *************/
 
