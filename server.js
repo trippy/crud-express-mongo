@@ -84,10 +84,17 @@ const yoda = new Quote ({
 });
 
 // note: `new Quote` creates the quote in memory. It has not been saved to the database yet. +++++++++++ To save to the database, you can run the `save` method
-yoda.save( (error, document) => {
-  if (error) console.error(error);
-  console.log(document);
-});
+
+// yoda.save( (error, document) => {
+//   if (error) console.error(error);
+//   console.log(document);
+// });
+// refactored to promises/async since mongoose deprecated callbacks
+async () => {
+  await yoda.save()
+    .catch(error => console.error(error));
+  console.log(yoda);
+}
 
 // ++++++++++++ the following is the same as above, but done with promises
 function saveQuote (quote) {
